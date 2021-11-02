@@ -35,7 +35,6 @@ module.exports = (sequelize, DataTypes) => {
       charset: 'utf8mb4',
       comment: 'Category Model',
       indexes: [{
-        unique: true,
         name: 'idx_unique',
         fields: ['parent_id', 'slug']
       }]

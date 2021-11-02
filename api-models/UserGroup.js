@@ -30,7 +30,6 @@ module.exports = (sequelize, DataTypes) => {
       charset: 'utf8mb4',
       comment: 'User Group Model',
       indexes: [{
-        unique: true,
         name: 'idx_unique',
         fields: ['user_id', 'group_id']
       }]
