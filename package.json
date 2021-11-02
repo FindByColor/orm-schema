@@ -1,0 +1,55 @@
+{
+  "name": "@findbycolor/fbc-orm-schema",
+  "version": "0.2.0",
+  "description": "Find By Color Object Relational Mapping Schema",
+  "author": "Find By Color",
+  "license": "UNLICENSE",
+  "type": "commonjs",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "engines": {
+    "node": ">= 14.17.3",
+    "npm": ">= 6.14.13"
+  },
+  "contributors": [
+    {
+      "name": "Peter Schmalfeldt",
+      "email": "me@peterschmalfeldt.com",
+      "url": "https://peterschmalfeldt.com"
+    }
+  ],
+  "scripts": {
+    "test": "./node_modules/.bin/eslint 'api-models/*.js' --fix",
+    "fix:type": "for i in ./api-models/*.js; do sed -i '' 's/DataTypes.INTEGER.UNSIGNED(15)/DataTypes.INTEGER(15).UNSIGNED/g' $i; done",
+    "fix:lines": "for i in ./api-models/*.js; do sed -i '' '/^$/d' $i; done",
+    "fix:unique": "npm run -s fix:unique:clean && npm run -s fix:unique:add",
+    "fix:unique:clean": "for i in ./api-models/*.js; do sed -i '' 's/unique: true,//g' $i; done",
+    "fix:unique:add": "for i in ./api-models/*.js; do sed -i '' \"s/name: 'idx_unique'/unique: true,name: 'idx_unique'/g\" $i; done",
+    "fix:beautify": "./node_modules/.bin/js-beautify ./api-models/*.js --editorconfig true",
+    "fix": "npm run -s fix:type && npm run -s fix:unique && npm run fix:lines && npm run -s fix:beautify && npm run -s test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FindByColor/orm-schema.git"
+  },
+  "bugs": {
+    "url": "https://github.com/FindByColor/orm-schema/issues"
+  },
+  "homepage": "https://github.com/FindByColor/orm-schema#readme",
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^8.1.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-html": "^6.2.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.1",
+    "eslint-plugin-sequelize": "^1.0.4",
+    "js-beautify": "^1.14.0",
+    "pre-commit": "^1.2.2"
+  },
+  "pre-commit": [
+    "fix"
+  ]
+}

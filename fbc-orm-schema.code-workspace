@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+    "window.title": "Find By Color${separator}ORM Schema",
+		"cSpell.words": [
+      "btree",
+      "findbycolor"
+    ]
+	}
+}
