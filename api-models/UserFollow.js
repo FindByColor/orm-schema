@@ -3,18 +3,18 @@ module.exports = (sequelize, DataTypes) => {
   const UserFollow = sequelize.define(
     'UserFollow', {
       id: {
-        type: DataTypes.INTEGER.UNSIGNED(10),
+        type: DataTypes.INTEGER(10).UNSIGNED,
         primaryKey: true,
         allowNull: false,
         autoIncrement: true
       },
       user_id: {
-        type: DataTypes.INTEGER.UNSIGNED(10),
+        type: DataTypes.INTEGER(10).UNSIGNED,
         allowNull: false,
         comment: 'Unique User ID'
       },
       follow_user_id: {
-        type: DataTypes.INTEGER.UNSIGNED(10),
+        type: DataTypes.INTEGER(10).UNSIGNED,
         allowNull: false,
         comment: 'Unique User ID of User that is being Followed'
       }

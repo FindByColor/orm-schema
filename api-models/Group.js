@@ -3,7 +3,7 @@ module.exports = (sequelize, DataTypes) => {
   const Group = sequelize.define(
     'Group', {
       id: {
-        type: DataTypes.INTEGER.UNSIGNED(10),
+        type: DataTypes.INTEGER(10).UNSIGNED,
         primaryKey: true,
         allowNull: false,
         autoIncrement: true,

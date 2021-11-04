@@ -3,7 +3,7 @@ module.exports = (sequelize, DataTypes) => {
   const SubscriptionType = sequelize.define(
     'SubscriptionType', {
       id: {
-        type: DataTypes.INTEGER.UNSIGNED(10),
+        type: DataTypes.INTEGER(10).UNSIGNED,
         primaryKey: true,
         allowNull: false,
         autoIncrement: true,
@@ -28,12 +28,12 @@ module.exports = (sequelize, DataTypes) => {
         comment: 'Description of the Subscription'
       },
       monthly_rate: {
-        type: DataTypes.DECIMAL.UNSIGNED(8, 2),
+        type: DataTypes.DECIMAL(8, 2).UNSIGNED,
         allowNull: false,
         comment: 'Monthly Rate of the Subscription'
       },
       annual_rate: {
-        type: DataTypes.DECIMAL.UNSIGNED(8, 2),
+        type: DataTypes.DECIMAL(8, 2).UNSIGNED,
         allowNull: false,
         comment: 'Annual Rate of the Subscription'
       }

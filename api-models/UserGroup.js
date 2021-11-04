@@ -3,18 +3,18 @@ module.exports = (sequelize, DataTypes) => {
   const UserGroup = sequelize.define(
     'UserGroup', {
       id: {
-        type: DataTypes.INTEGER.UNSIGNED(10),
+        type: DataTypes.INTEGER(10).UNSIGNED,
         primaryKey: true,
         allowNull: false,
         autoIncrement: true
       },
       user_id: {
-        type: DataTypes.INTEGER.UNSIGNED(10),
+        type: DataTypes.INTEGER(10).UNSIGNED,
         allowNull: false,
         comment: 'Unique User ID'
       },
       group_id: {
-        type: DataTypes.INTEGER.UNSIGNED(10),
+        type: DataTypes.INTEGER(10).UNSIGNED,
         allowNull: false,
         comment: 'Unique Group ID'
       }

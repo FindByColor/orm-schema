@@ -3,7 +3,7 @@ module.exports = (sequelize, DataTypes) => {
   const Tag = sequelize.define(
     'Tag', {
       id: {
-        type: DataTypes.INTEGER.UNSIGNED(10),
+        type: DataTypes.INTEGER(10).UNSIGNED,
         primaryKey: true,
         allowNull: false,
         autoIncrement: true,

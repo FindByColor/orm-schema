@@ -3,18 +3,18 @@ module.exports = (sequelize, DataTypes) => {
   const UserInvite = sequelize.define(
     'UserInvite', {
       id: {
-        type: DataTypes.INTEGER.UNSIGNED(10),
+        type: DataTypes.INTEGER(10).UNSIGNED,
         primaryKey: true,
         allowNull: false,
         autoIncrement: true
       },
       user_id: {
-        type: DataTypes.INTEGER.UNSIGNED(10),
+        type: DataTypes.INTEGER(10).UNSIGNED,
         allowNull: false,
         comment: 'Unique User ID of Referring User'
       },
       new_user_id: {
-        type: DataTypes.INTEGER.UNSIGNED(10),
+        type: DataTypes.INTEGER(10).UNSIGNED,
         allowNull: false,
         comment: 'Unique User ID of New User'
       }

@@ -3,19 +3,19 @@ module.exports = (sequelize, DataTypes) => {
   const SubscriptionPayment = sequelize.define(
     'SubscriptionPayment', {
       id: {
-        type: DataTypes.INTEGER.UNSIGNED(10),
+        type: DataTypes.INTEGER(10).UNSIGNED,
         primaryKey: true,
         allowNull: false,
         autoIncrement: true,
         comment: 'Unique ID'
       },
       user_id: {
-        type: DataTypes.INTEGER.UNSIGNED(10),
+        type: DataTypes.INTEGER(10).UNSIGNED,
         allowNull: false,
         comment: 'User ID making the payment'
       },
       subscription_id: {
-        type: DataTypes.INTEGER.UNSIGNED(10),
+        type: DataTypes.INTEGER(10).UNSIGNED,
         allowNull: false,
         comment: 'Subscription ID user is Subscribed to'
       },
@@ -33,7 +33,7 @@ module.exports = (sequelize, DataTypes) => {
         comment: 'Type of Payment'
       },
       payment_amount: {
-        type: DataTypes.DECIMAL.UNSIGNED(8, 2),
+        type: DataTypes.DECIMAL(8, 2).UNSIGNED,
         allowNull: false,
         comment: 'Amount of Payment'
       },

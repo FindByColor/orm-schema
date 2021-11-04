@@ -3,14 +3,14 @@ module.exports = (sequelize, DataTypes) => {
   const UserSettingNotification = sequelize.define(
     'UserSettingNotification', {
       id: {
-        type: DataTypes.INTEGER.UNSIGNED(10),
+        type: DataTypes.INTEGER(10).UNSIGNED,
         primaryKey: true,
         allowNull: false,
         autoIncrement: true,
         comment: 'Unique ID'
       },
       user_id: {
-        type: DataTypes.INTEGER.UNSIGNED(10),
+        type: DataTypes.INTEGER(10).UNSIGNED,
         allowNull: false,
         comment: 'Unique User ID'
       },

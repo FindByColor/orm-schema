@@ -3,14 +3,14 @@ module.exports = (sequelize, DataTypes) => {
   const Category = sequelize.define(
     'Category', {
       id: {
-        type: DataTypes.INTEGER.UNSIGNED(10),
+        type: DataTypes.INTEGER(10).UNSIGNED,
         primaryKey: true,
         allowNull: false,
         autoIncrement: true,
         comment: 'Unique ID'
       },
       parent_id: {
-        type: DataTypes.INTEGER.UNSIGNED(10),
+        type: DataTypes.INTEGER(10).UNSIGNED,
         comment: 'Unique ID of Parent Category'
       },
       name: {
