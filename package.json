@@ -21,10 +21,11 @@
   ],
   "scripts": {
     "test": "./node_modules/.bin/eslint 'api-models/*.js' --fix",
-    "fix:type": "for i in ./api-models/*.js; do sed -i '' 's/DataTypes.INTEGER.UNSIGNED(15)/DataTypes.INTEGER(15).UNSIGNED/g' $i; done",
-    "fix:lines": "for i in ./api-models/*.js; do sed -i '' '/^$/d' $i; done",
+    "fix:integer": "for i in ./api-models/*.js; do sed -i '' 's/DataTypes.INTEGER.UNSIGNED(10)/DataTypes.INTEGER(10).UNSIGNED/g' $i; done",
+    "fix:decimal": "for i in ./api-models/*.js; do sed -i '' 's/DataTypes.DECIMAL.UNSIGNED(8, 2)/DataTypes.DECIMAL(8, 2).UNSIGNED/g' $i; done",
+    "fix:whitespace": "for i in ./api-models/*.js; do sed -i '' '/^$/d' $i; done",
     "fix:beautify": "./node_modules/.bin/js-beautify ./api-models/*.js --editorconfig true",
-    "fix": "npm run -s fix:type && npm run fix:lines && npm run -s fix:beautify && npm run -s test"
+    "fix": "npm run -s fix:integer && npm run -s fix:decimal && npm run fix:whitespace && npm run -s fix:beautify && npm run -s test"
   },
   "repository": {
     "type": "git",
