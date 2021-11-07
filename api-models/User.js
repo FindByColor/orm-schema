@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 module.exports = (sequelize, DataTypes) => {
   const User = sequelize.define(
     'User', {
@@ -140,16 +140,16 @@ module.exports = (sequelize, DataTypes) => {
         }
       ]
     }
-  );
+  )
   User.associate = function(models) {
     User.hasOne(models.UserFollow, {
       foreignKey: 'follow_user_id',
       target: 'id'
-    });
+    })
     User.hasOne(models.UserInvite, {
       foreignKey: 'new_user_id',
       target: 'id'
-    });
+    })
   }
-  return User;
-};
+  return User
+}

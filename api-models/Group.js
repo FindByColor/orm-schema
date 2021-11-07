@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 module.exports = (sequelize, DataTypes) => {
   const Group = sequelize.define(
     'Group', {
@@ -33,6 +33,6 @@ module.exports = (sequelize, DataTypes) => {
       charset: 'utf8mb4',
       comment: 'Group Model'
     }
-  );
-  return Group;
-};
+  )
+  return Group
+}

@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 module.exports = (sequelize, DataTypes) => {
   const ApiAuthentication = sequelize.define(
     'ApiAuthentication', {
@@ -149,12 +149,12 @@ module.exports = (sequelize, DataTypes) => {
         }
       ]
     }
-  );
+  )
   ApiAuthentication.associate = function(models) {
     ApiAuthentication.belongsTo(models.User, {
       foreignKey: 'user_id',
       target: 'id'
-    });
+    })
   }
-  return ApiAuthentication;
-};
+  return ApiAuthentication
+}

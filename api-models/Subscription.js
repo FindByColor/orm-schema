@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 module.exports = (sequelize, DataTypes) => {
   const Subscription = sequelize.define(
     'Subscription', {
@@ -98,16 +98,16 @@ module.exports = (sequelize, DataTypes) => {
         }
       ]
     }
-  );
+  )
   Subscription.associate = function(models) {
     Subscription.belongsTo(models.User, {
       foreignKey: 'user_id',
       target: 'id'
-    });
+    })
     Subscription.belongsTo(models.SubscriptionType, {
       foreignKey: 'subscription_type_id',
       target: 'id'
-    });
+    })
   }
-  return Subscription;
-};
+  return Subscription
+}

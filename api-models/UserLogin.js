@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 module.exports = (sequelize, DataTypes) => {
   const UserLogin = sequelize.define(
     'UserLogin', {
@@ -59,12 +59,12 @@ module.exports = (sequelize, DataTypes) => {
       charset: 'utf8mb4',
       comment: 'User Login Model'
     }
-  );
+  )
   UserLogin.associate = function(models) {
     UserLogin.belongsTo(models.User, {
       foreignKey: 'user_id',
       target: 'id'
-    });
+    })
   }
-  return UserLogin;
-};
+  return UserLogin
+}

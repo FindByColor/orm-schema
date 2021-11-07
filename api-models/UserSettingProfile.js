@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 module.exports = (sequelize, DataTypes) => {
   const UserSettingProfile = sequelize.define(
     'UserSettingProfile', {
@@ -26,12 +26,12 @@ module.exports = (sequelize, DataTypes) => {
       charset: 'utf8mb4',
       comment: 'User Setting Profile Model'
     }
-  );
+  )
   UserSettingProfile.associate = function(models) {
     UserSettingProfile.belongsTo(models.User, {
       foreignKey: 'user_id',
       target: 'id'
-    });
+    })
   }
-  return UserSettingProfile;
-};
+  return UserSettingProfile
+}

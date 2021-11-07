@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 module.exports = (sequelize, DataTypes) => {
   const SubscriptionType = sequelize.define(
     'SubscriptionType', {
@@ -53,6 +53,6 @@ module.exports = (sequelize, DataTypes) => {
         fields: ['status']
       }]
     }
-  );
-  return SubscriptionType;
-};
+  )
+  return SubscriptionType
+}

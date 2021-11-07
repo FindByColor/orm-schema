@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 module.exports = (sequelize, DataTypes) => {
   const UserActivity = sequelize.define(
     'UserActivity', {
@@ -37,12 +37,12 @@ module.exports = (sequelize, DataTypes) => {
         fields: ['type']
       }]
     }
-  );
+  )
   UserActivity.associate = function(models) {
     UserActivity.belongsTo(models.User, {
       foreignKey: 'user_id',
       target: 'id'
-    });
+    })
   }
-  return UserActivity;
-};
+  return UserActivity
+}

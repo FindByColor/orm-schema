@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 module.exports = (sequelize, DataTypes) => {
   const UserSettingNotification = sequelize.define(
     'UserSettingNotification', {
@@ -108,12 +108,12 @@ module.exports = (sequelize, DataTypes) => {
         }
       ]
     }
-  );
+  )
   UserSettingNotification.associate = function(models) {
     UserSettingNotification.belongsTo(models.User, {
       foreignKey: 'user_id',
       target: 'id'
-    });
+    })
   }
-  return UserSettingNotification;
-};
+  return UserSettingNotification
+}

@@ -7,8 +7,9 @@
 	"settings": {
     "window.title": "Find By Color${separator}ORM Schema${separator}${activeEditorShort}",
 		"cSpell.words": [
-      "btree",
-      "findbycolor"
-    ]
+			"btree",
+			"findbycolor",
+			"parens"
+		]
 	}
 }

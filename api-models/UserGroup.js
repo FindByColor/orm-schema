@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 module.exports = (sequelize, DataTypes) => {
   const UserGroup = sequelize.define(
     'UserGroup', {
@@ -34,16 +34,16 @@ module.exports = (sequelize, DataTypes) => {
         fields: ['user_id', 'group_id']
       }]
     }
-  );
+  )
   UserGroup.associate = function(models) {
     UserGroup.belongsTo(models.User, {
       foreignKey: 'user_id',
       target: 'id'
-    });
+    })
     UserGroup.belongsTo(models.Group, {
       foreignKey: 'group_id',
       target: 'id'
-    });
+    })
   }
-  return UserGroup;
-};
+  return UserGroup
+}

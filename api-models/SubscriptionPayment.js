@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 module.exports = (sequelize, DataTypes) => {
   const SubscriptionPayment = sequelize.define(
     'SubscriptionPayment', {
@@ -59,16 +59,16 @@ module.exports = (sequelize, DataTypes) => {
         fields: ['payment_type']
       }]
     }
-  );
+  )
   SubscriptionPayment.associate = function(models) {
     SubscriptionPayment.belongsTo(models.Subscription, {
       foreignKey: 'subscription_id',
       target: 'id'
-    });
+    })
     SubscriptionPayment.belongsTo(models.User, {
       foreignKey: 'user_id',
       target: 'id'
-    });
+    })
   }
-  return SubscriptionPayment;
-};
+  return SubscriptionPayment
+}

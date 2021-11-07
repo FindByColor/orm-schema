@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 module.exports = (sequelize, DataTypes) => {
   const Tag = sequelize.define(
     'Tag', {
@@ -33,6 +33,6 @@ module.exports = (sequelize, DataTypes) => {
       charset: 'utf8mb4',
       comment: 'Tag Model'
     }
-  );
-  return Tag;
-};
+  )
+  return Tag
+}

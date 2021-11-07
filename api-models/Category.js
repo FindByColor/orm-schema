@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 module.exports = (sequelize, DataTypes) => {
   const Category = sequelize.define(
     'Category', {
@@ -39,6 +39,6 @@ module.exports = (sequelize, DataTypes) => {
         fields: ['parent_id', 'slug']
       }]
     }
-  );
-  return Category;
-};
+  )
+  return Category
+}
