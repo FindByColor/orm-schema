@@ -101,7 +101,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       new_password_requested: {
         type: DataTypes.DATE,
-        defaultValue: DataTypes.fn('NOW'),
+        defaultValue: DataTypes.NOW,
         comment: 'Date & Time Password Change was Requested'
       },
       new_email: {
@@ -116,7 +116,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       new_email_requested: {
         type: DataTypes.DATE,
-        defaultValue: DataTypes.fn('NOW'),
+        defaultValue: DataTypes.NOW,
         comment: 'Date & Time Email Change was Requested'
       }
     }, {

@@ -11,7 +11,6 @@ module.exports = (sequelize, DataTypes) => {
       },
       user_id: {
         type: DataTypes.INTEGER(10).UNSIGNED,
-        allowNull: false,
         comment: 'Unique User ID'
       },
       approved_whitelist: {

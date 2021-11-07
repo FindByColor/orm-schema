@@ -40,7 +40,7 @@ module.exports = (sequelize, DataTypes) => {
       payment_date: {
         type: DataTypes.STRING,
         allowNull: false,
-        defaultValue: DataTypes.fn('NOW'),
+        defaultValue: DataTypes.NOW,
         comment: 'Date Payment was Received'
       }
     }, {
